@@ -23,7 +23,16 @@ namespace RobotsVsDinosaurs
         {
             Console.WriteLine($"{type} attacks for {attackPower} damage!");
             robot.health -= attackPower;
-            Console.WriteLine($"{robot.name} now has {robot.health} health left.");
+            if (robot.health > 0)
+            {
+                Console.WriteLine($"{robot.name} now has {robot.health} health left.");
+            }
+            else
+            {
+                Console.WriteLine($"{robot.name} has broken down! \n");
+            }
+            
+            
         }
     }
 }

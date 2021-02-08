@@ -15,9 +15,9 @@ namespace RobotsVsDinosaurs
             dinosaurInventory = new List<Dinosaur>();
         }
 
-        public void PopulateHerd(Dinosaur dino)
+        public void PopulateHerd(Dinosaur dinosaur)
         {
-            dinosaurInventory.Add(dino);
+            dinosaurInventory.Add(dinosaur);
         }
     }
 }

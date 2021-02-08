@@ -19,13 +19,19 @@ namespace RobotsVsDinosaurs
             this.powerLevel = powerLevel;
             this.weapon = weapon;
         }
-        public void AttackDino(Dinosaur dino)
+        public void AttackDino(Dinosaur dinosaur)
         {
             Console.WriteLine($"{name} attacks for {weapon.attackPower} damage!");
-            dino.health -= weapon.attackPower;
-            Console.WriteLine($"{dino.type} now has {dino.health} health left.");
+            dinosaur.health -= weapon.attackPower;
+            if (dinosaur.health > 0)
+            {
+                Console.WriteLine($"{dinosaur.type} now has {dinosaur.health} health left.");
+            }
+            else
+            {
+                Console.WriteLine($"{dinosaur.type} has fallen! \n");
+            }
         }
-
 
     }
 }
