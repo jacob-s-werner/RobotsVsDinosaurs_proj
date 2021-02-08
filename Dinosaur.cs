@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    class Dinosaur
+    public class Dinosaur
     {
-        string type;
-        int health, energy, attackPower;
-
-
+        public string type;
+        public int health, energy, attackPower;
 
         public Dinosaur(string type, int attackPower)
         {
@@ -19,6 +17,7 @@ namespace RobotsVsDinosaurs
             health = 100;
             energy = 100;
             this.attackPower = attackPower;
+            
         }
     }
 }

@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    class Battlefield
+    public class Battlefield
     {
+
+
+        public Battlefield()
+        {
+            
+
+        }
+        
+        
+        
+        
+
+        
     }
 }

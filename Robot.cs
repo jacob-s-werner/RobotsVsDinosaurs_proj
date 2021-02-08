@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    class Robot
+    public class Robot
     {
-        string name;
-        int health, powerLevel;
-        Weapon weapon;
+        public string name;
+        public int health, powerLevel;
+        public Weapon weapon;
 
         public Robot(string name, int powerLevel, Weapon weapon)
         {
