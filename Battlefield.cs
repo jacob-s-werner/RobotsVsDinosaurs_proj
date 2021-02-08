@@ -8,20 +8,20 @@ namespace RobotsVsDinosaurs
 {
     public class Battlefield
     {
-        Herd herd;
-        Fleet fleet;
+        public Fleet fleet;
+        public Herd herd;
 
-        public Battlefield(Herd herd, Fleet fleet)
+        public Battlefield()
         {
-            this.herd = herd;
-            this.fleet = fleet;
-
-
+            fleet = new Fleet();
+            herd = new Herd();
         }
         public void RunBattle()
         {
             Dinosaur currentDinosaur;
             Robot currentRobot;
+
+            Console.WriteLine($"Starting Battle! \n");
 
             while (herd.dinosaurInventory.Count > 0 && fleet.robotInventory.Count > 0)
             {
@@ -41,13 +41,14 @@ namespace RobotsVsDinosaurs
 
             if (herd.dinosaurInventory.Count > 0)
             {
-                Console.WriteLine("The Dinosaur herd demolished your fleet!");
+                Console.WriteLine("\nThe Dinosaur herd demolished your fleet!");
             }
             else
             {
-                Console.WriteLine("Your Robot fleet obliterated the herd, congratulations on your promotion!");
+                Console.WriteLine("\nYour Robot fleet obliterated the herd, congratulations on your promotion!");
             }
-            
+
+            Console.WriteLine("\n----------------END OF BATTLE-------------");
         }
         public void BattleRound(Dinosaur currentDinosaur, Robot currentRobot)
         {

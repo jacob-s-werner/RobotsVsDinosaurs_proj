@@ -13,6 +13,16 @@ namespace RobotsVsDinosaurs
         public Herd()
         {
             dinosaurInventory = new List<Dinosaur>();
+
+            Console.WriteLine("Scanning Dinosaurs types...");
+            Dinosaur dino1 = new Dinosaur("Pterodactyl", 6);
+            Dinosaur dino2 = new Dinosaur("T-Rex", 13);
+            Dinosaur dino3 = new Dinosaur("Velociraptor", 9);
+
+            Console.WriteLine("Reaching rogue Dinosaur Herd proximity....");
+            PopulateHerd(dino1);
+            PopulateHerd(dino2);
+            PopulateHerd(dino3);
         }
 
         public void PopulateHerd(Dinosaur dinosaur)

@@ -29,8 +29,22 @@ namespace RobotsVsDinosaurs
             }
             else
             {
-                Console.WriteLine($"{dinosaur.type} has fallen! \n");
+                Console.WriteLine($"{dinosaur.type} has fallen!");
             }
+        }
+        public void DisplayInfo()
+        {
+            Console.Write($"{name} has ");
+
+            if (weapon.type[0] == 'A' || weapon.type[0] == 'E' || weapon.type[0] == 'I' || weapon.type[0] == 'O' || weapon.type[0] == 'U')
+            {
+                Console.Write($"an ");
+            }
+            else
+            {
+                Console.Write($"a ");
+            }
+            Console.Write($"{weapon.type} equipped. \n");
         }
 
     }
