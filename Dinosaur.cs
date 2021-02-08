@@ -19,5 +19,11 @@ namespace RobotsVsDinosaurs
             this.attackPower = attackPower;
             
         }
+        public void AttackRobot(Robot robot)
+        {
+            Console.WriteLine($"{type} attacks for {attackPower} damage!");
+            robot.health -= attackPower;
+            Console.WriteLine($"{robot.name} now has {robot.health} health left.");
+        }
     }
 }
