@@ -12,11 +12,11 @@ namespace RobotsVsDinosaurs
         public int health, powerLevel;
         public Weapon weapon;
 
-        public Robot(string name, int powerLevel, Weapon weapon)
+        public Robot(string name, Weapon weapon)
         {
             this.name = name;
             health = 100;
-            this.powerLevel = powerLevel;
+            this.powerLevel = 100;
             this.weapon = weapon;
         }
         public void AttackDino(Dinosaur dinosaur)

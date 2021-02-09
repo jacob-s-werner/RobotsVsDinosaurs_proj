@@ -32,9 +32,9 @@ namespace RobotsVsDinosaurs
             PopulateWeaponInventory(plainMace);
 
             Console.WriteLine("Gearing up Robots....");
-            Robot robot1 = new Robot("BetZ", 1, AssignRandomWeapon());
-            Robot robot2 = new Robot("BarnE", 1, AssignRandomWeapon());
-            Robot robot3 = new Robot("BobE", 1, AssignRandomWeapon());
+            Robot robot1 = new Robot("BetZ", AssignRandomWeapon());
+            Robot robot2 = new Robot("BarnE", AssignRandomWeapon());
+            Robot robot3 = new Robot("BobE", AssignRandomWeapon());
 
             robot1.DisplayInfo();
             robot2.DisplayInfo();
@@ -56,7 +56,7 @@ namespace RobotsVsDinosaurs
         }
         public Weapon AssignRandomWeapon()
         {
-            Weapon weapon = weaponInventory[random.Next(weaponInventory.Count - 1)];
+            Weapon weapon = weaponInventory[random.Next(weaponInventory.Count)];
             return weapon;
         }
     }

@@ -10,6 +10,8 @@ namespace RobotsVsDinosaurs
     {
         public string type;
         public int health, energy, attackPower;
+        public string[] attackTypes = {"Bites", "Scratches", "Chomps", "Tail Whips"};
+        Random random;
 
         public Dinosaur(string type, int attackPower)
         {
@@ -17,11 +19,13 @@ namespace RobotsVsDinosaurs
             health = 100;
             energy = 100;
             this.attackPower = attackPower;
+            random = new Random();
             
         }
         public void AttackRobot(Robot robot)
         {
-            Console.WriteLine($"{type} attacks for {attackPower} damage!");
+            string attackType = attackTypes[random.Next(attackTypes.Length)];
+            Console.WriteLine($"{type} {attackType} for {attackPower} damage!");
             robot.health -= attackPower;
             if (robot.health > 0)
             {
