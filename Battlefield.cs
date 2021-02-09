@@ -22,6 +22,7 @@ namespace RobotsVsDinosaurs
             Robot currentRobot;
 
             Console.WriteLine($"Starting Battle! \n");
+            Console.WriteLine($"{fleet.robotInventory[0].name} jumps into battle first!");
 
             while (herd.dinosaurInventory.Count > 0 && fleet.robotInventory.Count > 0)
             {

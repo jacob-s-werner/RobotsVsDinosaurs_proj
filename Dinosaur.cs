@@ -24,19 +24,26 @@ namespace RobotsVsDinosaurs
         }
         public void AttackRobot(Robot robot)
         {
-            string attackType = attackTypes[random.Next(attackTypes.Length)];
-            Console.WriteLine($"{type} {attackType} for {attackPower} damage!");
-            robot.health -= attackPower;
-            if (robot.health > 0)
+            if (energy >= 10)
             {
-                Console.WriteLine($"{robot.name} now has {robot.health} health left.");
+                string attackType = attackTypes[random.Next(attackTypes.Length)];
+                Console.WriteLine($"{type} {attackType} for {attackPower} damage!");
+                robot.health -= attackPower;
+                energy -= 10;
+                if (robot.health > 0)
+                {
+                    Console.WriteLine($"{robot.name} now has {robot.health} health left.");
+                }
+                else
+                {
+                    Console.WriteLine($"{robot.name} has broken down! \n");
+                }
             }
             else
             {
-                Console.WriteLine($"{robot.name} has broken down! \n");
+                Console.WriteLine($"{type} is exhausted and trying regain energy!");
+                energy += 10;
             }
-            
-            
         }
     }
 }
