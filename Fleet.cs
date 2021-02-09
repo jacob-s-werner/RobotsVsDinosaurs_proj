@@ -80,13 +80,13 @@ namespace RobotsVsDinosaurs
 
                 if (userInput >= 1 && userInput <= weaponInventory.Count)
                 {
-                    Console.WriteLine($"You chose {weaponInventory[userInput - 1].type} for {robot.name}");
+                    Console.WriteLine($"You chose {weaponInventory[userInput - 1].type} for {robot.name}\n");
                     return weaponInventory[userInput - 1];
                 }
                 else if (userInput == weaponInventory.Count + 1)
                 {
                     Weapon randomWeapon = AssignRandomWeapon();
-                    Console.WriteLine($"{robot.name}, using their own random algorithm, chose {randomWeapon.type}");
+                    Console.WriteLine($"{robot.name}, using their own random algorithm, chose {randomWeapon.type}\n");
                     return randomWeapon;
                 }
                 else

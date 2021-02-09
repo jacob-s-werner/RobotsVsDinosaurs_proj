@@ -32,7 +32,7 @@ namespace RobotsVsDinosaurs
                 }
                 else
                 {
-                    Console.WriteLine($"{dinosaur.type} has fallen!");
+                    Console.WriteLine($"{dinosaur.type} has fallen!\n");
                 }
             }
             else

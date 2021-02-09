@@ -12,7 +12,7 @@ namespace RobotsVsDinosaurs
         public int health, energy, attackPower;
         public string[] attackTypes = {"Bites", "Scratches", "Chomps", "Tail Whips"};
         Random random;
-
+        
         public Dinosaur(string type, int attackPower)
         {
             this.type = type;
@@ -20,7 +20,6 @@ namespace RobotsVsDinosaurs
             energy = 100;
             this.attackPower = attackPower;
             random = new Random();
-            
         }
         public void AttackRobot(Robot robot)
         {
@@ -45,5 +44,6 @@ namespace RobotsVsDinosaurs
                 energy += 10;
             }
         }
+        
     }
 }
