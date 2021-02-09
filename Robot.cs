@@ -12,12 +12,12 @@ namespace RobotsVsDinosaurs
         public int health, powerLevel;
         public Weapon weapon;
 
-        public Robot(string name, Weapon weapon)
+        public Robot(string name)
         {
             this.name = name;
             health = 100;
-            this.powerLevel = 100;
-            this.weapon = weapon;
+            powerLevel = 100;
+            weapon = null;
         }
         public void AttackDino(Dinosaur dinosaur)
         {
@@ -56,6 +56,7 @@ namespace RobotsVsDinosaurs
             }
             Console.Write($"{weapon.type} equipped. \n");
         }
+
 
     }
 }
