@@ -55,12 +55,12 @@ namespace RobotsVsDinosaurs
         {
             while (currentRobot.health > 0 || currentDinosaur.health > 0)
             {
-                currentRobot.AttackDino(currentDinosaur);
+                currentRobot.Attack(currentDinosaur);
                 if (currentDinosaur.health <= 0)
                 {
                     break;
                 }
-                currentDinosaur.AttackRobot(currentRobot);
+                currentDinosaur.Attack(currentRobot);
                 if (currentRobot.health <= 0)
                 {
                     break;
@@ -68,7 +68,6 @@ namespace RobotsVsDinosaurs
             }
         }
         
-
 
     }
     

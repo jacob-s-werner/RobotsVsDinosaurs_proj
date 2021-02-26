@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    public class Dinosaur
+    public class Dinosaur : Fighter
     {
         public string type;
-        public int health, energy, attackPower;
+        public int energy, attackPower;
         public string[] attackTypes = {"Bites", "Scratches", "Chomps", "Tail Whips"};
         Random random;
         
         public Dinosaur(string type, int attackPower)
         {
             this.type = type;
-            health = 100;
-            energy = 100;
             this.attackPower = attackPower;
             random = new Random();
         }
