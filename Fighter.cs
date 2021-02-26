@@ -29,7 +29,7 @@ namespace RobotsVsDinosaurs
                 }
                 else
                 {
-                    Console.WriteLine($"{enemyFighter.name} has fallen!\n");
+                    enemyFighter.DeathMessage();
                 }
             }
             else
@@ -41,6 +41,10 @@ namespace RobotsVsDinosaurs
         public void DisplayCurrentHealth()
         {
             Console.WriteLine($"{name} has {health} health left.");
+        }
+        public virtual void DeathMessage()
+        {
+            Console.WriteLine($"{name} has fallen!\n");
         }
     }
     //        ___                         
