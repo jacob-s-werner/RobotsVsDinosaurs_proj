@@ -29,12 +29,12 @@ namespace RobotsVsDinosaurs
                 }
                 else
                 {
-                    enemyFighter.DeathMessage();
+                    enemyFighter.DisplayDeathMessage();
                 }
             }
             else
             {
-                Console.WriteLine($"{name} has low power and is recharging its battery.");
+                enemyFighter.DisplayEnergyLevelRechargeMessage();
                 energyLevel += energyRechargeRate;
             }
         }
@@ -42,9 +42,13 @@ namespace RobotsVsDinosaurs
         {
             Console.WriteLine($"{name} has {health} health left.");
         }
-        public virtual void DeathMessage()
+        public virtual void DisplayDeathMessage()
         {
-            Console.WriteLine($"{name} has fallen!\n");
+            Console.WriteLine($"{name} has exploded!\n");
+        }
+        public virtual void DisplayEnergyLevelRechargeMessage()
+        {
+            Console.WriteLine($"{name} has low power and is recharging its battery.");
         }
     }
     //        ___                         
