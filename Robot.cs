@@ -8,9 +8,13 @@ namespace RobotsVsDinosaurs
 {
     public class Robot : Fighter
     {
-        public int powerLevel;
         public Weapon weapon;
-
+        
+        public int PowerLevel
+        {
+            get => energyLevel;
+            set => energyLevel = value;
+        }
         public Robot(string name)
         {
             this.name = name;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    public class Fighter
+    public abstract class Fighter
     {
         public string name;
         public int health, energyLevel, attackEnergyUsage, attackDamageGiven, energyRechargeRate;
@@ -15,6 +15,7 @@ namespace RobotsVsDinosaurs
         {
             health = 100;
             energyLevel = 100;
+            energyRechargeRate = 10;
         }
         public void Attack(Fighter enemyFighter)
         {
