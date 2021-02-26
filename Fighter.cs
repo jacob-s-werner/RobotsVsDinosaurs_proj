@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RobotsVsDinosaurs
 {
-    class Fighter
+    public class Fighter
     {
         public string name;
-        public int health, energyLevel;
+        public int health, energyLevel, attackEnergyUsage, attackDamageGiven;
 
         public Fighter()
         {
