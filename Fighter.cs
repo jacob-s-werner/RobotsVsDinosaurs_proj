@@ -25,7 +25,7 @@ namespace RobotsVsDinosaurs
                 energyLevel -= attackEnergyUsage;
                 if (enemyFighter.health > 0)
                 {
-                    Console.WriteLine($"{enemyFighter.name} now has {enemyFighter.health} health left.");
+                    enemyFighter.DisplayCurrentHealth();
                 }
                 else
                 {
@@ -38,18 +38,22 @@ namespace RobotsVsDinosaurs
                 energyLevel += energyRechargeRate;
             }
         }
-    } 
-      //        ___                         
-      //       |+ +|                 
-      // ______|{=}|______                 
-      //{                 }        
-      // |               |            
-      // |               |          
-      // |               |            
-      // |**|         |**|                               
-      //     |   |   |            
-      //     |   |   |                               
-      //     |   |   |            
-      //    _|   |   |_
-      //  [_____ | _____]
+        public void DisplayCurrentHealth()
+        {
+            Console.WriteLine($"{name} has {health} health left.");
+        }
+    }
+    //        ___                         
+    //       |+ +|                 
+    // ______|{=}|______                 
+    //{                 }        
+    // |               |            
+    // |               |          
+    // |               |            
+    // |**|         |**|                               
+    //     |   |   |            
+    //     |   |   |                               
+    //     |   |   |            
+    //    _|   |   |_
+    //  [_____ | _____]
 }
