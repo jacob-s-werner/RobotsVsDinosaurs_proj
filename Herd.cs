@@ -10,7 +10,6 @@ namespace RobotsVsDinosaurs
     {
         public List<Dinosaur> dinosaurInventory;
         public List<Dinosaur> listOfDinosaurOptions;
-
         public Random random;
         public Herd()
         {

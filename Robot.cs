@@ -9,7 +9,6 @@ namespace RobotsVsDinosaurs
     public class Robot : Fighter
     {
         public Weapon weapon;
-        
         public int PowerLevel
         {
             get => energyLevel;
@@ -34,7 +33,5 @@ namespace RobotsVsDinosaurs
             }
             Console.Write($"{weapon.type} equipped. \n");
         }
-
-
     }
 }

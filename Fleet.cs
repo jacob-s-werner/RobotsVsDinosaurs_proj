@@ -11,7 +11,6 @@ namespace RobotsVsDinosaurs
         public List<Robot> robotInventory;
         public List<Weapon> weaponInventory;
         Random random;
-
         public Fleet()
         {
             robotInventory = new List<Robot>();
@@ -48,7 +47,6 @@ namespace RobotsVsDinosaurs
             PopulateFleet(robot2);
             PopulateFleet(robot3);
         }
-
         public void PopulateFleet(Robot robot)
         {
             robotInventory.Add(robot);
@@ -95,9 +93,7 @@ namespace RobotsVsDinosaurs
                 {
                     Console.WriteLine("Invalid Option, please enter a correct value");
                 }
-                
             }
-
             // needs an option outside of while loop
             return null;
         }

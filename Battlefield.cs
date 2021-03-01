@@ -10,7 +10,6 @@ namespace RobotsVsDinosaurs
     {
         public Fleet fleet;
         public Herd herd;
-
         public Battlefield()
         {
             fleet = new Fleet();
@@ -67,8 +66,5 @@ namespace RobotsVsDinosaurs
                 }
             }
         }
-        
-
     }
-    
 }

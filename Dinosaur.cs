@@ -38,6 +38,5 @@ namespace RobotsVsDinosaurs
         {
             Console.WriteLine($"{Type} is exhausted and trying to regain energy!");
         }
-
     }
 }
