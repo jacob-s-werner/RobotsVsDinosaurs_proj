@@ -66,7 +66,7 @@ namespace RobotsVsDinosaurs
                 }
                 else if (dinosaur == dinosaurInventory[0])
                 {
-                    Console.WriteLine($"The herd has a {dinosaur.type}");
+                    Console.WriteLine($"The herd has a {dinosaur.Type}");
                 }
                 
             }

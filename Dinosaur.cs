@@ -8,24 +8,36 @@ namespace RobotsVsDinosaurs
 {
     public class Dinosaur : Fighter
     {
-        public string type;
-        public int energy, attackPower;
         public string[] attackTypes = {"Bites", "Scratches", "Chomps", "Tail Whips"};
         Random random;
-        
+        public string Type
+        {
+            get => name;
+            set => name = value;
+        }
+        public int AttackPower
+        {
+            get => attackDamageGiven;
+            set => attackDamageGiven = value;
+        }
+        public int Energy
+        {
+            get => energyLevel;
+            set => energyLevel = value;
+        }
         public Dinosaur(string type, int attackPower)
         {
-            this.type = type;
-            this.attackPower = attackPower;
+            name = type;
+            attackDamageGiven = attackPower;
             random = new Random();
         }
         public override void DisplayDeathMessage()
         {
-            Console.WriteLine($"{type} has fallen!\n");
+            Console.WriteLine($"{Type} has fallen!\n");
         }
         public override void DisplayEnergyLevelRechargeMessage()
         {
-            Console.WriteLine($"{type} is exhausted and trying to regain energy!");
+            Console.WriteLine($"{Type} is exhausted and trying to regain energy!");
         }
 
     }
