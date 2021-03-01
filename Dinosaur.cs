@@ -9,7 +9,6 @@ namespace RobotsVsDinosaurs
     public class Dinosaur : Fighter
     {
         public string[] attackTypes = {"Bites", "Scratches", "Chomps", "Tail Whips"};
-        Random random;
         public string Type
         {
             get => name;
@@ -29,7 +28,6 @@ namespace RobotsVsDinosaurs
         {
             name = type;
             attackDamageGiven = attackPower;
-            random = new Random();
             attackEnergyUsage = 10;
         }
         public override void DisplayDeathMessage()
