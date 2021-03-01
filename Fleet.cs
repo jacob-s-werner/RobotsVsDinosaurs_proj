@@ -81,18 +81,21 @@ namespace RobotsVsDinosaurs
                 if (userInput >= 1 && userInput <= weaponInventory.Count)
                 {
                     Console.WriteLine($"You chose {weaponInventory[userInput - 1].type} for {robot.name}\n");
+                    robot.attackDamageGiven = weaponInventory[userInput - 1].attackPower;
                     return weaponInventory[userInput - 1];
                 }
                 else if (userInput == weaponInventory.Count + 1)
                 {
                     Weapon randomWeapon = AssignRandomWeapon();
                     Console.WriteLine($"{robot.name}, using their own random algorithm, chose {randomWeapon.type}\n");
+                    robot.attackDamageGiven = randomWeapon.attackPower;
                     return randomWeapon;
                 }
                 else
                 {
                     Console.WriteLine("Invalid Option, please enter a correct value");
                 }
+                
             }
 
             // needs an option outside of while loop
