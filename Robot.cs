@@ -18,6 +18,7 @@ namespace RobotsVsDinosaurs
         public Robot(string name)
         {
             this.name = name;
+            attackEnergyUsage = 10;
         }
         public void DisplayInfo()
         {

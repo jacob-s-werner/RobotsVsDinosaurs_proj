@@ -30,6 +30,7 @@ namespace RobotsVsDinosaurs
             name = type;
             attackDamageGiven = attackPower;
             random = new Random();
+            attackEnergyUsage = 10;
         }
         public override void DisplayDeathMessage()
         {
