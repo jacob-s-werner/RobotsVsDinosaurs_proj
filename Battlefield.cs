@@ -20,6 +20,10 @@ namespace RobotsVsDinosaurs
             Dinosaur currentDinosaur;
             Robot currentRobot;
 
+            herd.DisplayHerdInfo();
+
+            Console.WriteLine("Prepare to land! [press ENTER]");
+            Console.ReadLine();
             Console.WriteLine($"Starting Battle! \n");
             Console.WriteLine($"{fleet.robotInventory[0].name} jumps into battle first!");
 

@@ -59,15 +59,7 @@ namespace RobotsVsDinosaurs
         {
             foreach (Dinosaur dinosaur in dinosaurInventory)
             {
-                if (dinosaur != dinosaurInventory[0] && dinosaur != dinosaurInventory[dinosaurInventory.Count - 1])
-                {
-                    Console.Write("a ");
-                }
-                else if (dinosaur == dinosaurInventory[0])
-                {
                     Console.WriteLine($"The herd has a {dinosaur.Type}");
-                }
-                
             }
         }
     }
