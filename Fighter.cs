@@ -35,7 +35,7 @@ namespace RobotsVsDinosaurs
             }
             else
             {
-                enemyFighter.DisplayEnergyLevelRechargeMessage();
+                DisplayEnergyLevelRechargeMessage();
                 energyLevel += energyRechargeRate;
             }
         }
